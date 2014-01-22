@@ -1,0 +1,49 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:s="http://jboss.com/products/seam/taglib"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich" template="layout/template.xhtml">
+
+	<ui:define name="body">
+
+		<h:messages globalOnly="true" styleClass="message" id="globalMessages" />
+
+		<rich:panel>
+			<f:facet name="header">Contatos</f:facet>
+			<div class="results" id="contatoList">
+				<rich:dataTable	id="contatoList" var="_contato" value="#{contatos}">
+					<h:column>
+						<f:facet name="header">Id</f:facet>
+			            #{_contato.id}
+			        </h:column>
+					<h:column>
+						<f:facet name="header">Nome</f:facet>
+			            #{_contato.nome}
+			        </h:column>
+			        <h:column>
+						<f:facet name="header">Email</f:facet>
+			            #{_contato.email}
+			        </h:column>
+					<h:column>
+						<f:facet name="header">Ação</f:facet>
+						<s:link id="editar" action="#{contatoAction.editarContato}"
+							value="Editar" />
+						<s:link id="remover" action="#{contatoAction.removerContato}"
+							value="Remover" />
+					</h:column>
+				</rich:dataTable>
+			</div>
+		</rich:panel>
+
+		<s:div styleClass="actionButtons">
+			<s:button id="novo" action="#{contatoAction.novoContato}" value="Novo contato"/>
+		</s:div>
+
+	</ui:define>
+</ui:composition>
+

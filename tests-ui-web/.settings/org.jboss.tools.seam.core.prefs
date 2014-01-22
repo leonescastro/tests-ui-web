@@ -1,0 +1,13 @@
+action.package=org.domain.testsuiweb.session
+action.sources=/tests-ui-web/src/main/java
+eclipse.preferences.version=1
+model.package=org.domain.testsuiweb.entity
+model.sources=/tests-ui-web/src/main/java
+seam.project.connection.profile=PostgreSQL - local
+seam.project.deployment.type=war
+seam.project.settings.version=1.1
+seam.project.web.root.folder=/tests-ui-web/src/main/webapp
+seam.test.creating=false
+seam.test.project=tests-ui-web
+test.package=org.domain.testsuiweb.test
+test.sources=/tests-ui-web/src/main/java

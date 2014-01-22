@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#contato.xhtml" PATH="/contato.xhtml"
+  SHAPE="256,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#contato.xhtml:0" NAME="item"
+   PATH="/contato.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="contatos::#contatos.xhtml" NAME="output"
+    PATH="/contatos.xhtml" TARGET="rules:#contatos.xhtml"
+    TITLE="contatos" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#contatos.xhtml" PATH="/contatos.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#contatos.xhtml:0" NAME="item"
+   PATH="/contatos.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="novoContato::#contato.xhtml" NAME="output"
+    PATH="/contato.xhtml" TARGET="rules:#contato.xhtml"
+    TITLE="novoContato" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="editarContato::#contato.xhtml"
+    NAME="output1" PATH="/contato.xhtml" TARGET="rules:#contato.xhtml"
+    TITLE="editarContato" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>
